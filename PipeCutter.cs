@@ -8,6 +8,9 @@ namespace toolbox
 {
     internal class PipeCutter : Tool
     {
+        public PipeCutter(bool Use){
+            use = Use;
+        }
         public override void Describe()
         {
             Console.WriteLine("Pipe Cutter – Cuts pipes cleanly and precisely, usually for plumbing.");

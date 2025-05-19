@@ -11,14 +11,18 @@ namespace toolbox
         static void Main(string[] args)
         {
             Hammer hammer = new Hammer();
-            PipeCutter pipeCutter_1 = new PipeCutter();
-            PipeCutter pipeCutter_2 = new PipeCutter();
+            PipeCutter pipeCutter_1 = new PipeCutter(true);
+            PipeCutter pipeCutter_2 = new PipeCutter(true);
             Screwdriver screwdriver = new Screwdriver();
             Saw saw = new Saw();
             hammer.Use();
 
             Tool[] tools = new Tool[] { hammer, pipeCutter_1, pipeCutter_2, screwdriver, saw };
-            
+            foreach (Tool tool in tools)
+            {
+                tool.Describe();
+                tool.Use();
+            }
 
         }
     }
