@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace toolbox
 {
-    internal class Saw
+    internal class Saw : Tool
     {
+        public override void Describe()
+        {
+            Console.WriteLine("Saw – Cuts wood, metal, or plastic using a toothed blade.");
+        }
     }
 }

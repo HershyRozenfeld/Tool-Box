@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace toolbox
 {
-    internal class PipeCutter
+    internal class PipeCutter : Tool
     {
+        public override void Describe()
+        {
+            Console.WriteLine("Pipe Cutter – Cuts pipes cleanly and precisely, usually for plumbing.");
+        }
     }
 }

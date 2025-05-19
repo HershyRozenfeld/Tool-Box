@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace toolbox
 {
-    internal class Wrench
+    internal class Wrench : Tool
     {
+        public override void Describe()
+        {
+            Console.WriteLine("Wrench – Tightens or loosens nuts and bolts.");
+        }
     }
 }

@@ -10,6 +10,8 @@ namespace toolbox
     {
         static void Main(string[] args)
         {
+            Hammer hammer = new Hammer();
+            hammer.Use();
         }
     }
 }

@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace toolbox
 {
-    internal class Drill
+    internal class Drill : Tool
     {
+        public override void Describe()
+        {
+            Console.WriteLine("Drill – Makes holes in various materials using a rotating bit.");
+        }
     }
 }

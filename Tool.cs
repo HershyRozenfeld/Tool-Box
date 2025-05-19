@@ -10,14 +10,21 @@ namespace toolbox
     {
         private string _name;
         private int _weight;
-        // private bool use = false;
-        public void Describe()
+        protected bool use = false;
+        public virtual void Describe()
         {
 
         }
         public void Use()
         {
-
+            if (use)
+            {
+                Console.WriteLine("Tool is being used!");
+            }
+            else
+            {
+                Console.WriteLine("The tool is loose!");
+            }
         }
     }
 }
