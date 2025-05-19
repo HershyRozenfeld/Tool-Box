@@ -8,7 +8,7 @@ namespace toolbox
 {
     internal class Hammer : Tool
     {
-        private int UseCount = 0;
+        
         public Hammer() { }
         public Hammer(string Name, int Weight, bool Use, string Category) : base(Name, Weight, Use, Category)
         {

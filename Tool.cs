@@ -12,6 +12,7 @@ namespace toolbox
         protected int weight;
         protected bool use = false;
         public string category;
+        public int UseCount = 0;
 
         public Tool()
         {
@@ -47,6 +48,7 @@ namespace toolbox
             if (action == "pickUp" && !use)
             {
                 use = true;
+                UseCount++;
             }
             else if (action == "dropOff" && use)
             {
