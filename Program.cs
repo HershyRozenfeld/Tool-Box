@@ -20,11 +20,15 @@ namespace toolbox
             hammer.Use();
 
             Tool[] tools = new Tool[] { hammer, pipeCutter_1, pipeCutter_2, screwdriver, saw , nailGun, wireStripper};
+            Toolbox toolbox = new Toolbox();
             foreach (Tool tool in tools)
             {
                 tool.Describe();
                 tool.Use();
+                toolbox.AddTool(tool);
             }
+
+            toolbox.printTools();
 
         }
     }

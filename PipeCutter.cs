@@ -8,6 +8,14 @@ namespace toolbox
 {
     internal class PipeCutter : Tool
     {
+        public PipeCutter() { }
+        public PipeCutter(string Name, int Weight, bool Use, string Category) : base(Name, Weight, Use, Category)
+        {
+            name = Name;
+            weight = Weight;
+            use = Use;
+            category = "Cutting";
+        }
         public PipeCutter(bool Use){
             use = Use;
         }

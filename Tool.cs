@@ -8,9 +8,25 @@ namespace toolbox
 {
     internal class Tool
     {
-        private string _name;
-        private int _weight;
+        protected string name;
+        protected int weight;
         protected bool use = false;
+        public string category;
+
+        public Tool()
+        {
+            name = "Tool";
+            weight = 0;
+            use = false;
+            category = "General";
+        }
+        public Tool(string Name, int Weight, bool Use, string Category)
+        {
+            name = Name;
+            weight = Weight;
+            use = Use;
+            category = Category;
+        }
         public virtual void Describe()
         {
 
@@ -24,6 +40,21 @@ namespace toolbox
             else
             {
                 Console.WriteLine("The tool is loose!");
+            }
+        }
+        public void pickUpDropOff(string action)
+        {
+            if (action == "pickUp" && !use)
+            {
+                use = true;
+            }
+            else if (action == "dropOff" && use)
+            {
+                use = false;
+            }
+            else
+            {
+                Console.WriteLine("Invalid action or tool state.");
             }
         }
     }
